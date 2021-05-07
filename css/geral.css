@@ -16,6 +16,10 @@ body, h1, h2, ul, li, p, dd, dt, dl {
     background: #faf6ed;
     color: #222;
     -webkit-font-smoothing: antialiased;
+    
+  }
+
+  .grid-container {
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
   }
@@ -184,7 +188,7 @@ body, h1, h2, ul, li, p, dd, dt, dl {
   }
   
   @media (max-width: 700px) {
-    body {
+    .grid-container {
       grid-template-columns: 1fr;
     }
     .menu, .grid-section, .copy {
@@ -257,7 +261,7 @@ body, h1, h2, ul, li, p, dd, dt, dl {
     display: none;
   }
   
-  [ dt::after {
+  [data-anime="accordion"] dt::after {
     content: '⇩';
     margin-left: 10px;
   }
